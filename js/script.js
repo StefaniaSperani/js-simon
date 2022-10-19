@@ -14,6 +14,8 @@ let numeriRandom = [];
 //creo una variabile per i numeri, in caso in futuro li voglia cambiare
 let numeriDaCreare = 5;
 
+let timeHtml = document.getElementById('time-html');
+
 //creo la funzione che mi creerà i numeri random
 function getRndInteger(min, max) {
     return Math.floor(Math.random() * (max - min + 1) ) + min;
@@ -28,6 +30,22 @@ while(numeriRandom.length < numeriDaCreare){
 }
 //ora li inserisco nell'html
 showNumeri.innerHTML = `
-<div>I numero casuali sono: ${numeriRandom}. 
+<div>I numeri casuali sono: ${numeriRandom}. 
 Memorizzali subito! </div>
 `;
+
+//ora mi serve il timer
+let timeLeft = 3;
+timeHtml.innerHTML = timeLeft;
+const timer = setInterval(countDown, 1000);
+
+function countDown(){
+    timeLeft--;
+    timeHtml.innerHTML = timeLeft;
+    if(timeLeft === 0){
+        showNumeri.classList.add('d-none');
+        timeHtml.classList.add('d-none');
+        clearInterval(timer);
+    }
+
+}
