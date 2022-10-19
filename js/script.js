@@ -27,4 +27,7 @@ while(numeriRandom.length < numeriDaCreare){
     }
 }
 //ora li inserisco nell'html
-showNumeri.innerHTML = `I numero casuali sono: ${numeriRandom}`;
+showNumeri.innerHTML = `
+<div>I numero casuali sono: ${numeriRandom}. 
+Memorizzali subito! </div>
+`;
