@@ -30,22 +30,29 @@ while(numeriRandom.length < numeriDaCreare){
 }
 //ora li inserisco nell'html
 showNumeri.innerHTML = `
-<div>I numeri casuali sono: ${numeriRandom}. 
+<div class="fs-3">I numeri casuali sono: <span class="text-white">${numeriRandom}</span>. 
 Memorizzali subito! </div>
 `;
 
 //ora mi serve il timer
-let timeLeft = 3;
+//creo la variabile del tempo mancante(dal nr più alto)
+let timeLeft = 5;
+//scrivo in pagina il timeleft da subito, così inizia il contdown dal 3
 timeHtml.innerHTML = timeLeft;
+//ora creo una variabile che usa una timing function
 const timer = setInterval(countDown, 1000);
-
+//e al suo interno definisco la funzione che voglio passargli
 function countDown(){
+    //decremento il time left, per il contdown
     timeLeft--;
+    //e scrivo in pagina in maniera tale che si veda il decrescere dei numeri
     timeHtml.innerHTML = timeLeft;
+    //ora DEVO fermarlo nel momento in cui arriva a 0
     if(timeLeft === 0){
+        //e nascondo il div che avevo inserito(riga32)
         showNumeri.classList.add('d-none');
+        //facndo sparire anche il timer ovviamente
         timeHtml.classList.add('d-none');
         clearInterval(timer);
     }
-
 }
