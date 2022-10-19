@@ -65,8 +65,8 @@ function countDown(){
         showNumeri.classList.add('d-none');
         //facendo sparire anche il timer ovviamente
         timeHtml.classList.add('d-none');
-        // numberInput.classList.remove('d-none'); //DA RIVEDERE
-        // numberInput.classList.add('d-block'); //DA RIVEDERE
+        let divInput = document.getElementById('input');
+        divInput.classList.remove('d-none');
         clearInterval(timer);
     }
 }
