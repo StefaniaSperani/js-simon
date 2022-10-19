@@ -7,3 +7,23 @@
 body{
     background-color: brown;
 }
+.button {
+    padding: 10px 15px;
+    font-size: 15px;
+    text-align: center;
+    cursor: pointer;
+    outline: none;
+    color: #fff;
+    background-color: #042baa;
+    border: none;
+    border-radius: 15px;
+    box-shadow: 0 3px #999;
+  }
+  
+  .button:hover {background-color: #01519b}
+  
+  .button:active {
+    background-color: #0b91df;
+    box-shadow: 0 2px rgba(202, 199, 199, 0.541);
+    transform: translateY(4px);
+  }
