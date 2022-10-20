@@ -65,8 +65,10 @@ function countDown(){
         showNumeri.classList.add('d-none');
         //facendo sparire anche il timer ovviamente
         timeHtml.classList.add('d-none');
+        //faccio sparire anche tutto il div contenente i numeri
         let divInput = document.getElementById('input');
         divInput.classList.remove('d-none');
+        //e poi fermo il countdown altrimenti, anche se non visibile, continuerà a contare
         clearInterval(timer);
     }
 }
