@@ -62,9 +62,9 @@ function countDown(){
     //ora DEVO fermarlo nel momento in cui arriva a 0
     if(timeLeft === 0){
         //e nascondo il div che avevo inserito(riga32)
-        showNumeri.classList.add('d-none');
+        showNumeri.classList.toggle('d-none');
         //facendo sparire anche il timer ovviamente
-        timeHtml.classList.add('d-none');
+        timeHtml.classList.toggle('d-none');
         //faccio sparire anche tutto il div contenente i numeri
         let divInput = document.getElementById('input');
         divInput.classList.remove('d-none');
